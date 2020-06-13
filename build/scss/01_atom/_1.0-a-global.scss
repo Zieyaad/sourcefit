@@ -1,0 +1,168 @@
+// 1. ATOM [ 1.0. GLOBAL ] ############################################################################################
+
+// A. MOBILE STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.1. GLOBAL STYLING ------------------------------------
+
+html { 
+  margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+
+body { 
+  margin: 0px; padding: 0px; height: 100%; height: 1500px; font-family: $poppins-regular; 
+  background-color: $grey-f9; overflow-x: hidden;
+
+  * { transition: all ease-in-out 0.3s; }
+}
+
+.boxed { position: relative; padding: 0px 15px; width: 100%; max-width: 1024px; margin: 0 auto; background-color: $white; overflow: hidden; }
+
+.mr-auto { margin-right: auto; }
+
+.ml-auto { margin-left: auto; }
+
+.header-offset { padding-top: 60px; }
+
+// A.1. END -----------------------------------------------
+
+// A.2. TYPOGRAPHY STYING ---------------------------------
+
+h1, .a-h1 {
+  font-family: $poppins-bold; color: $darkBlue; line-height: 1.2;
+  font-size: 26px; margin: 0px 0px 5px 0px;
+}
+
+h2, .a-h2 {
+  font-family: $poppins-bold; color: $darkBlue; line-height: 1.2;
+  font-size: 24px; margin: 0px 0px 20px 0px;
+}
+
+h3, .a-h3 {
+  font-family: $poppins-bold; color: $darkBlue; line-height: 1.2;
+  font-size: 18px; margin: 0px 0px 25px 0px;
+}
+
+p, .a-p {
+  font-family: $poppins-regular; color: $darkBlue; line-height: 1.7;
+  font-size: 16px; margin: 0px 0px 25px 0px;
+
+  &._small { font-size: 15px; line-height: 1.4; }
+  &._large { font-size: 18px; line-height: 1.4; }
+
+  &:last-of-type { margin-bottom: 0px; }
+}
+
+ul, .ul, ol, .ol {
+  li, .li { font-size: 16px; line-height: 1.4; }
+}
+
+strong, .strong { font-family: $poppins-bold; display: inline-block; }
+
+.a-img { max-width: 100%; height: auto; display: block; }
+
+.a-text {
+  &._blue { color: $blue; }
+  &._lightBlue { color: $lightBlue; }
+  &._darkPurple { color: $darkPurple; }
+  &._green { color: $green; 
+    &.a-link {
+      &:before { background-color: $green; }
+    }
+  }
+}
+
+// A.2. END -----------------------------------------------
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. MIN-WIDTH: 576px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($xs-up) {}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {
+
+  // A.2. TYPOGRAPHY STYING ---------------------------------
+
+  h1, .a-h1 { font-size: 30px; }
+
+  h3, .a-h3 { font-size: 19px; }
+
+  p, .a-p { font-size: 17px; 
+
+    &._large { font-size: 19px; }
+  }
+
+  ul, .ul, ol, .ol {
+    li, .li { font-size: 17px; }
+  }
+
+  // A.2. END -----------------------------------------------
+
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+
+  // A.2. TYPOGRAPHY STYING ---------------------------------
+
+  h1, .a-h1 { font-size: 34px; }
+
+  h3, .a-h3 { font-size: 20px; }
+
+  p, .a-p { font-size: 18px; line-height: 1.4; 
+
+    &._large { font-size: 20px; }
+  }
+
+  ul, .ul, ol, .ol {
+    li, .li { font-size: 18px; }
+  }
+
+  // A.2. END -----------------------------------------------
+
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1024px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($mdl-up) {
+
+  // A.2. TYPOGRAPHY STYING ---------------------------------	
+
+  h1, .a-h1 { font-size: 37px; }
+
+  h3, .a-h3 { font-size: 21px; }
+
+  // A.2. END -----------------------------------------------
+
+}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// F. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {}
+
+// F. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// G. MIN-WIDTH: 1400px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($xlg-up) {}
+
+// G. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

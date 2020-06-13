@@ -1,0 +1,34 @@
+<div class="o-form o-sign-up-form">
+  <h2 class="a-h1">Sign Up</h2>
+
+  <form class="m-form">
+    <div class="a-form-field">
+      <div class="grid">
+        <div class="grid-item _xs-12 _sm-6">
+          <label class="a-p _large a-label" for="signEmail">Where can we spam you?</label>
+        </div>
+        <div class="grid-item _xs-12 _sm-6">
+          <input type="text" name="Email" id="signEmail" class="a-input input-email" placeholder="john.doe@e-male.com" required="required" />
+          <span class="a-error-msg">Please enter a valid email address.</span>
+        </div>
+      </div>
+    </div> 
+
+    <div class="a-form-field">
+      <div class="grid">
+        <div class="grid-item _xs-12 _sm-6">
+          <label class="a-p _large a-label" for="signPassword">Choose your weapon</label>
+        </div>
+        <div class="grid-item _xs-12 _sm-6">
+          <input type="password" name="Password" id="signPassword" class="a-input input-password" placeholder="********" required="required" />
+          <span class="a-error-msg">Password should be 8 characters which contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="a-form-field btn-group">
+      <button type="button" class="a-btn btn-purple _small btn-send" v-on:click="validateForm()">Sign me up</button>      
+    </div>
+
+  </form>  
+</div>

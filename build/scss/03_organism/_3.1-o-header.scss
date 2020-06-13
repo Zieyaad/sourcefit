@@ -1,0 +1,141 @@
+// 3. ORGANISM [ 3.1. HEADER ] ########################################################################################
+
+// A. MOBILE STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.1. GLOBAL STYING -------------------------------------
+
+.o-header { 
+  padding: 15px 0px; display: flex; align-items: center; z-index: 10; 
+  position: absolute; left: 15px; right: 015px; top: 0px;
+  
+  .a-logo { max-height: 20px; max-width: 200px; width: 100%; display: inline-block; overflow: hidden;
+    svg { width: 100%; }
+    &:hover {
+      #DRUNK { fill: $darkPurple; }
+      #DEVELOPERS { fill: $blue; }
+    }
+  }
+
+  .a-nav-togl { 
+    padding: 0px; margin: 0px; margin-left: auto; height: 40px; width: 40px; cursor: pointer; 
+    opacity: 0; position: absolute; right: 0px; top: 50%; transform: translateY(-50%); z-index: 3;
+  }
+
+  .a-nav-hamburger {
+    width: 24px; height: 3px; position: relative; background-color: $blue; z-index: 2;
+    border-radius: 3px; margin: 0px; margin-right: 8px; padding: 0px; margin-left: auto;
+
+    &:before, &:after {
+      content: ''; position: absolute; background-color: inherit; 
+      width: inherit; height: inherit; border-radius: inherit
+    }
+
+    &:before { top: -7px; }
+    &:after { bottom: -7px; }    
+  }
+
+  .m-nav-wrap { 
+    position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 1; transform: translateX(100%);
+    width: 100%; padding: 45px 15px 15px 15px; text-align: right; background-color: $lightGrey;
+
+    ul { padding: 0px; margin: 0px; list-style: none;
+      li { margin-bottom: 5px;
+        a { text-decoration: none; font-size: 18px; color: $green; 
+          &:hover { color: $darkBlue;  }
+        }
+      }
+    }
+  }
+
+  .a-nav-togl:checked ~ .a-nav-hamburger { background-color: $darkPurple; position: fixed; right: 15px; top: 24px; } 
+  .a-nav-togl:hover ~ .a-nav-hamburger { background-color: $darkPurple; } 
+  .a-nav-togl:checked ~ .m-nav-wrap { transform: translateX(0%); position: fixed; } 
+}
+
+// A.1. END -----------------------------------------------
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. MIN-WIDTH: 576px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($xs-up) {
+
+  .o-header {   
+    .a-logo { margin-top: 2px; max-width: 250px; }
+  }
+
+}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {
+
+  .o-header { 
+  
+    .a-logo { margin-top: 0px; max-width: 300px; max-height: 23px; }
+
+    .a-nav-togl { display: none; }
+    .a-nav-hamburger { display: none; }
+
+    .m-nav-wrap { 
+      position: relative; transform: translateX(0%); margin-left: auto;
+      width: auto; padding: 0px; background-color: transparent;
+
+      ul { display: flex;
+        li { margin-bottom: 0px; margin-left: 10px;
+          a {}
+        }
+      }
+    }
+
+    .a-nav-togl:checked ~ .a-nav-hamburger { background-color: transparent; position: relative; right: auto; } 
+    .a-nav-togl:checked ~ .m-nav-wrap {  transform: translateX(0%); position: relative; } 
+  }
+
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+
+  .o-header { padding: 17px 0px;  
+    .a-logo { width: auto; max-width: 407px; max-height: 30px; 
+      svg { width: auto; }
+    }
+
+    .m-nav-wrap {
+      ul { 
+        li { margin-left: 15px; margin-right: 5px;
+          a { font-size: 20px; }
+        }
+      }
+    }
+  }
+
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1024px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($mdl-up) {}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// F. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {}
+
+// F. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// G. MIN-WIDTH: 1400px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($xlg-up) {}
+
+// G. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

@@ -1,0 +1,20 @@
+<section class="o-articles">  
+  <h2 class="a-h1">Articles</h2>
+  <div v-for="post in articles" class="m-card">
+    <div class="m-meta-details">
+      <div class="a-meta-author">
+        <img src="../images/icon--author.png" alt="author image name">
+      </div>
+      <div class="a-meta-group">
+        <h3 class="a-h3 a-meta-title">{{post.title}}</h3>
+        <span class="a-meta-date">Friday December 16, 2019</span>
+        <span class="a-meta-name">Fred The Slasher Designer</span>        
+      </div>
+    </div>
+    <div class="m-card-body">
+      <p>{{post.body}}</p>
+      <a href="#" class="a-text _green a-link">Read more</a>
+    </div>
+  </div>
+  <a href="#" class="a-text _green a-link">Explore more articles</a>
+</section>

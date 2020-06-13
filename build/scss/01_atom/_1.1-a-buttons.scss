@@ -1,0 +1,124 @@
+// 1. ATOM [ 1.1. BUTTONS ] ###########################################################################################
+
+// A. MOBILE STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.1. A-BTN STYLING -------------------------------------
+
+.a-btn { 
+  background-color: $darkBlue; position: relative; border-radius: 20px; min-height: 39px;
+  font-family: $poppins-regular; font-size: 16px; line-height: 1.2; letter-spacing: 2px;
+  padding: 8px 20px; min-width: 208px; transition: all ease-in-out 0.3s; z-index: 1;
+  outline: none; border: 1px solid $darkBlue; color: $white; cursor: pointer;
+  display: inline-block; text-decoration: none; text-align: center; display: flex;
+  box-shadow: 4px 4px 8px 2px rgba(darkBlue, 0.5); align-items: center; justify-content: center;
+
+  &:hover, &:focus, &:active { color: $darkBlue; text-decoration: none; background-color: $white; }
+
+  &:active { top: 1px; }
+
+  // BUTTON COLORS --------------------------------
+
+  &.btn-orange { 
+    background-color: $orange; border-color: $orange; color: $white;
+    box-shadow: 4px 4px 8px 2px rgba($orange, 0.5);
+
+    &:hover, &:focus, &:active { color: $orange; background-color: $white; }
+  }
+
+  &.btn-purple { 
+    background-color: $purple; border-color: $purple; color: $white;
+    box-shadow: 4px 4px 8px 2px rgba($purple, 0.5);
+
+    &:hover, &:focus, &:active { color: $purple; background-color: $white; }
+  }
+
+  &.btn-hollow_purple { 
+    background-color: transparent; border-color: $purple; color: $purple;
+    box-shadow: 4px 4px 8px 2px rgba($orange, 0.5);
+
+    &:hover, &:focus, &:active { color: $white; background-color: $purple; }
+  }
+
+  // BUTTON SIZES ---------------------------------
+
+  &._small { font-size: 14px; }  
+}
+
+// A.1. END -----------------------------------------------
+
+
+// A.2. A-LINK STYLING ------------------------------------
+
+.a-link { position: relative; text-decoration: none;  
+  &:before {
+    content: ''; position: absolute; bottom: 2px; left: 0px; right: 0px; height: 1px;
+  }
+  &:after {
+    content: '>>'; position: absolute; color: inherit; right: -20px; top: 50%;
+    transform: translateY(-50%); opacity: 0; transition: all ease-in-out 0.3s;
+    text-decoration: none;
+  }
+  &:hover { text-decoration: none; margin-right: 20px;
+    &:after { transition-delay: 0.3s; opacity: 1; }
+  }
+}
+
+// A.2. END -----------------------------------------------
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. MIN-WIDTH: 576px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($xs-up) {}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {
+
+  .a-btn { font-size: 17px; 
+
+    // BUTTON SIZES ---------------------------------
+
+    &._small { font-size: 16px; } 
+  }
+
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+
+  .a-btn { font-size: 18px; 
+
+    // BUTTON SIZES ---------------------------------
+
+    &._small { font-size: 18px; } 
+  }
+
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1024px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($mdl-up) {}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// F. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {}
+
+// F. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// G. MIN-WIDTH: 1400px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($xlg-up) {}
+
+// G. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

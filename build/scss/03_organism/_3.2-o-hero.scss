@@ -1,0 +1,101 @@
+// 3. ORGANISM [ 3.2. HERO BANNER ] ###################################################################################
+
+// A. MOBILE STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// A.1. GLOBAL STYING -------------------------------------
+
+.o-hero { position: relative; padding-bottom: 30px;
+
+  &:before {
+    content: ''; position: absolute; top: 0px; left: -15px; right: -15px; bottom: 0px;
+    background-image: url('../images/img--hero-bg.png'); background-repeat: no-repeat;
+    background-position: top center; background-size: cover; z-index: 0; opacity: 0; 
+
+    animation: fadeInOverlay ease-in 0.5s; animation-fill-mode: forwards;
+    animation-duration: 1s; animation-delay: 0s;
+  }
+
+  .hero-content { 
+    padding-top: 20px; position: relative; z-index: 1; max-width: 400px; text-align: center;
+    display: flex; flex-wrap: wrap; flex-direction: column; margin: 0 auto;
+
+    .m-list { margin-top: 25px; }
+    .a-btn { 
+      margin-right: auto; margin-left: auto; margin-top: 25px; 
+      margin-bottom: 25px; align-self: center;
+    }
+
+    &._text-content {      
+      animation: fadeInLeft ease-in 0.5s; animation-fill-mode: forwards;
+      animation-duration: 0.5s; animation-delay: 1s; opacity: 0;
+    }
+
+    &._image-content {
+      animation: fadeInRight ease-in 0.5s; animation-fill-mode: forwards;
+      animation-duration: 0.5s; animation-delay: 1s; opacity: 0;
+    }
+  }
+}
+
+
+// A.1. END -----------------------------------------------
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// B. MIN-WIDTH: 576px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($xs-up) {}
+
+// B. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// C. MIN-WIDTH: 768px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($sm-up) {
+
+  .o-hero { padding-bottom: 55px;
+    &:before { background-size: contain; }
+    .hero-content { text-align: left; max-width: 100%;
+      p { max-width: 320px; }
+      .m-list { margin-left: 15px; margin-top: 30px; }
+      .a-btn { margin-top: 30px; margin-bottom: 0px; }
+    }
+  }
+
+}
+
+// C. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// D. MIN-WIDTH: 992px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($md-up) {
+
+  .o-hero { padding-bottom: 75px; 
+    .hero-content {
+      .m-list { margin-left: 25px; margin-top: 40px; }
+      .a-btn { margin-top: 40px; }
+    }
+  }
+
+}
+
+// D. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// E. MIN-WIDTH: 1024px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($mdl-up) {}
+
+// E. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// F. MIN-WIDTH: 1200px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($lg-up) {}
+
+// F. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// G. MIN-WIDTH: 1400px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@media ($xlg-up) {}
+
+// G. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################

@@ -1,0 +1,36 @@
+// 0. BASE [ 0.2. TYPOGRAPHY ]  #######################################################################################
+
+// A. FONT SOURCE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@font-face {
+  font-family: Poppins-Light;
+  src: url('../fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+$poppins-light          : Poppins-Light, helvetica, arial, sans-serif;
+$poppins-regular        : Poppins-Regular, helvetica, arial, sans-serif;
+$poppins-semibold       : Poppins-SemiBold, helvetica, arial, sans-serif;
+$poppins-bold           : Poppins-Bold, helvetica, arial, sans-serif;
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################
